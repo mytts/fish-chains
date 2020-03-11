@@ -10,7 +10,7 @@ function chains -d "Quickly toggle proxychains prefix"
   end
 
   # Parse the command line.
-  set -l command_parts (string match -ir '^(\s*)(proxychains -q(\s+|$))?(.*)' $command_buffer)
+  set -l command_parts (string match -ir '^(\s*)(proxychains4 -q(\s+|$))?(.*)' $command_buffer)
 
   switch (count $command_parts)
     case 3
