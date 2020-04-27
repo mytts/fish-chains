@@ -17,7 +17,7 @@ function chains -d "Quickly toggle proxychains prefix"
       # No "chains".
 
       # Add "chains" to the beginning of the command, after any leading whitespace (if present).
-      commandline -r (string join '' $command_parts[2] 'proxychains -q ' $command_parts[3])
+      commandline -r (string join '' $command_parts[2] 'proxychains4 -q ' $command_parts[3])
 
       # Push the cursor position ahead if necessary (+15 for 'chains ').
       test $cursor_position -ge (string length $command_parts[2])
